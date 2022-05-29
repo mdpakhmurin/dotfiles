@@ -205,7 +205,7 @@ bar {
 				font pango: JetBrainsMono Nerd Font Mono 12
 				position top 
 				status_command bumblebee-status \
-				-m battery time pasink pasource \
+				-m layout-xkb battery time pasink pasource \
 				-p time.format="%H:%M | %d.%m.%y" \
 				-t iceberg-rainbow
 				colors {
