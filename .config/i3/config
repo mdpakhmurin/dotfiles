@@ -199,19 +199,6 @@ for_window [class=".*"] border pixel 0
 client.focused #555555 #555555 #ffffff #4477f4 #2e9eFF 
 exec --no-startup-id  picom --corner-radius 10 -r 10 -i 1 --vsync --inactive-dim 0.1 --inactive-opacity 0.97 -b
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-				font pango: JetBrainsMono Nerd Font Mono 12
-				position top 
-				status_command bumblebee-status \
-				-m layout-xkb battery time pasink pasource \
-				-p time.format="%H:%M | %d.%m.%y" \
-				-t iceberg-rainbow
-				colors {
-								background #1e1e2e
-								focused_workspace #d9e0ee #575268 #d9e0ee
-								inactive_workspace #1e1e2e #1e1e2e #d9e0ee
-								urgent_workspace #ffffff #aa3522 #d9e0ee
-				}
-}
+exec --no-startup-id polybar
+
+exec --no-startup-id nvidia-settings -l
