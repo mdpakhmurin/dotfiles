@@ -53,6 +53,10 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# brightness control
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +2%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 2%-
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec "rofi -modi drun,run -show drun" 
 # A more modern dmenu replacement is rofi:
@@ -198,7 +202,3 @@ gaps inner 10
 for_window [class=".*"] border pixel 0
 client.focused #555555 #555555 #ffffff #4477f4 #2e9eFF 
 exec --no-startup-id  picom --corner-radius 10 -r 10 -i 1 --vsync --inactive-dim 0.1 --inactive-opacity 0.97 -b
-
-exec --no-startup-id polybar
-
-exec --no-startup-id nvidia-settings -l
